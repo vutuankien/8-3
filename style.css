@@ -1,0 +1,81 @@
+body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url("./source_img/anh-8-3-didongviet-5.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+}
+.heading{
+      font-size: 60px;
+      background: -webkit-linear-gradient(#e60404, #0497e6,#c2ed04,#e8088e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: capitalize;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+}
+.button{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap:150px;
+      position: relative;
+}
+.yes{
+      position:absolute;
+      /* transform: translateX(-250px); */
+}
+
+.yes,.no{
+      padding:15px 30px;
+      font-size: 25px;
+      font-family:'Courier New', Courier, monospace;
+      /* border-radius: /25px; */
+      text-transform: uppercase;
+      font-weight: 700;
+      outline: none;
+      border: none;
+      box-shadow: 0px 0px 20px  #333;
+      /* color:#e60404; */
+      /* background-color: #0497e6; */
+      /* position: absolute; */
+      display: flex;
+      /* gap:70px; */
+      /* margin:0 50px */
+}
+.no{
+      border:none;
+      cursor:pointer;
+      transform:all 0.3s;
+      /* position:relative; */
+      transform: translateX(250px);
+}
+.no::before{
+      content:"";
+      position :absolute;
+      width:24px;
+      height:24px;
+      top:-5px;
+      left:-5px;
+      border-top:2px solid tomato;
+      border-left:2px solid tomato;
+      transition:all 0.25s;
+}
+.no:hover:before ,.no:hover:after{
+      width:104%;
+      height:110%;
+}
+.no:after{
+      content:"";
+      position :absolute;
+      width:24px;
+      height:24px;
+      bottom:-5px;
+      right:-5px;
+      border-bottom:2px solid tomato;
+      border-right:2px solid tomato;
+      transition:all 0.30s;
+}
